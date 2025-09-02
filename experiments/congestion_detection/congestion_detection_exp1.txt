@@ -1,0 +1,59 @@
+The following data contains number of people using escalators and elevators inside a metro station.
+The data is measured every 30 seconds and tells the number of people inside the equipment zone at the timestamp.
+Your task is to detect congestion based on the number of people inside the equipment zones.
+To do this, go through the data and compare the numbers to congestion limits, which are the following:
+
+Congestion limits for escalator zones:
+Low congestion: between 17 and 22 people.
+Medium congestion: between 22 and 53 people.
+High congestion: more than 53 people.
+
+Congestion limits for elevator zones:
+Low congestion: between 21 and 29 people.
+Medium congestion: between 29 and 70 people.
+High congestion: more than 70 people.
+
+The data contains the following equipment zones:
+Escalators: ESC1, ESC2, ESC3, ESC4,
+Elevators: ELE1
+
+Task: Find out if there is congestion detected in the data.
+
+<Data>
+{data}
+</Data>
+
+Congestion instance is defined as three consecutive timestamp where any level of congestion (low, medium, high) is measured.
+Timestamps are consecutive, if the time between them is 30 seconds.
+For each equipment, list congestion instances.
+
+Each instance listed should contain the following information:
+- Time interval when congestion was detected, including weekday, date and time.
+- Congestion duration in seconds. This is calculated by the time between first and last timestamp of the instance.
+- The highest congestion level of the instance.
+
+Do this step by step:
+1. For each equipment zone, iterate through the data in chronological order.
+2. Identify sequences of three or more consecutive timestamps where the number of people falls within any congestion level (low, medium, or high).
+3. For each valid sequence:
+   - Record the start and end timestamp (including weekday, date, and time).
+   - Calculate the duration in seconds (time between first and last timestamp of the instance)
+   - Determine the highest congestion level observed during the sequence.
+4. Add the instance to the list of congestion intervals for that equipment.
+5. After analyzing all data, output the results in the specified JSON format.
+
+As an output, list the instances of congestion for each equipment in the following JSON format:
+
+{{
+  "zone": [
+    {{
+      "congestion_interval": "weekday, date, start-time, end-time",
+      "duration_seconds": duration,
+      "highest_level": "congestion level"
+    }},
+    ...
+  ],
+  ...
+}}
+
+Only return the JSON object. Do not include explanations or extra text.
