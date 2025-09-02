@@ -1,0 +1,73 @@
+The following data records people’s movements inside a metro station using sensors.
+Each entry includes an 'agent_id' field that uniquely identifies a person.
+Your task is to determine the number of unique individuals appearing in the data.
+
+Example:
+
+<Data>
+{data_example}
+<\Data>
+
+Step by step:
+1. Extract the 'agent_id' column: ['ba41a6', '97098e', '658499', 'ba41a6', '97098e', '658499']
+2. Identify unique agent_ids: ['ba41a6', '97098e', '658499']
+3. Count: 3 unique agent_ids
+
+Answer:
+3
+There are 3 unique individuals based on the agent_id column.
+
+Example:
+
+<Data>
+{data_example2}
+<\Data>
+
+Step by step:
+1. Extract the 'agent_id' column: ['3ffc64', '782051', '3ffc64']
+2. Identify unique agent_ids: ['3ffc64', '782051']
+3. Count: 2 unique agent_ids
+
+Answer:
+2
+There are 2 unique individuals based on the agent_id column.
+
+Example:
+
+<Data>
+{data_example3}
+<\Data>
+
+Step by step:
+1. Extract the 'agent_id' column: 
+['56d92d', '89ce11', '644c9d', '6ff960', '1cfd2c', 'e338d1', '8a5321', '311fff',
+'432b31', '3d9997', '1098e4', 'b8e789', '930f31', '694f05', '3f4c48', '09ca4d',
+'87cd07', '362958', '56d92d', '89ce11', '644c9d', '6ff960', '1cfd2c', 'e338d1',
+'8a5321', '311fff', '432b31', '3d9997', '1098e4', 'b8e789', '930f31', '694f05',
+'3f4c48', '09ca4d', '87cd07', '362958']
+2. Identify unique agent_ids: 
+['56d92d' '89ce11' '644c9d' '6ff960' '1cfd2c' 'e338d1' '8a5321' '311fff'
+'432b31' '3d9997' '1098e4' 'b8e789' '930f31' '694f05' '3f4c48' '09ca4d'
+'87cd07' '362958']
+3. Count: 18 unique agent_ids
+
+Answer:
+18
+There are 18 unique individuals based on the agent_id column.
+
+Now apply the same logic to the following dataset:
+
+<Data>
+{data}
+</Data>
+
+Task: Determine how many unique individuals appear in this data.
+
+Step by step:
+1. Extract the 'agent_id' field from each record.
+2. Identify the distinct 'agent_id' values
+3. Count the distinct values.
+
+Return the result as:
+- A single integer (the number of unique people)
+- A one-sentence explanation of how the result was obtained.
