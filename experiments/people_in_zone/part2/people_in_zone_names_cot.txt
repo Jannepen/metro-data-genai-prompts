@@ -1,0 +1,26 @@
+The following data records people’s locations inside a metro station using sensors.
+Your task is to determine the number of people inside a specific zone.
+
+Task: Determine the number of people inside the zone using the following data
+
+<Data>
+{data}
+</Data>
+
+Do this step by step, by going one row at a time:
+1. Go through the data one row at a time.
+2. For each row, read agent_id and zone_name.
+3. Check if the zone_name is 'Zone_A'
+4. If it is, include the agent in the zone.
+5. If an agent appears multiple times in the zone, only count them once.
+6. After going through the whole data, check the individuals inside the zone and confirm that they are in 'Zone_A'.
+
+Return the result exactly in this format:
+
+Zone A:
+- Count: <number>
+- People:
+  - agent_id: <id>
+  ...
+  
+Do not return the step-by-step reasoning. Just return the final result in the format above.
