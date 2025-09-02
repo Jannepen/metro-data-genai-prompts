@@ -1,0 +1,12 @@
+The following data contains information about the number of people exiting and entering a metro station.
+Your task is to determine how many unique people used the station.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine how many unique individuals in total used the station.
+
+Return the result as:
+- Counts of people entering and exiting the station.
+- The number of unique people that used the station.
