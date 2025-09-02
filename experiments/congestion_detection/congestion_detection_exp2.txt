@@ -1,0 +1,58 @@
+The following data contains individual agent presence inside equipment zones (escalators and elevators) in a metro station.
+Each row represents one agent detected inside a zone at the final second of a 30-second interval.
+
+Your task is to detect congestion based on the number of unique agents inside each equipment zone at each timestamp.
+To do this, group the data by timestamp and zone, count the number of unique agents, and compare the counts to congestion limits:
+
+Congestion limits for escalator zones:
+Low congestion: between 17 and 22 people.
+Medium congestion: between 22 and 53 people.
+High congestion: more than 53 people.
+
+Congestion limits for elevator zones:
+Low congestion: between 21 and 29 people.
+Medium congestion: between 29 and 70 people.
+High congestion: more than 70 people.
+
+The data contains the following equipment zones:
+Escalators: ESC1, ESC2, ESC3, ESC4,
+Elevators: ELE1
+
+Task: Find out if there is congestion detected in the data.
+
+<Data>
+{data}
+</Data>
+
+A congestion instance is defined as three or more consecutive timestamps (30 seconds apart) where any level of congestion (low, medium, or high) is detected.
+For each equipment, list congestion instances.
+
+Each instance listed should contain the following information:
+- Time interval when congestion was detected, including weekday, date and time.
+- Congestion duration in seconds (time between first and last timestamp of the instance).
+- The highest congestion level observed during the instance.
+
+Do this step by step:
+1. For each equipment zone, group the data by timestamp and count unique agent IDs.
+2. Compare the counts to the congestion thresholds to classify each timestamp.
+3. Identify sequences of three or more consecutive timestamps with any congestion level (low, medium, or high)
+4. For each valid sequence:
+   - Record the start and end timestamp (including weekday, date, and time).
+   - Calculate the duration in seconds.
+   - Determine the highest congestion level observed.
+5. Output the results in the following JSON format:
+
+{{
+  "zone": [
+    {{
+      "congestion_interval": "weekday, date, start-time, end-time",
+      "duration_seconds": duration,
+      "highest_level": "congestion level"
+    }},
+    ...
+  ],
+  ...
+}}
+
+Only return the JSON object. Do not include explanations or extra text.
+Make sure to include the name of the zone before listing the instances. Do not list the same instance multiple times.
