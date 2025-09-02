@@ -9,7 +9,7 @@ z_axis: The z_axis value must be between -176.5 and -171.5
 Task: Determine the number of people inside the zone A using the following data
 
 <Data>
-{df_test_csv}
+{data}
 </Data>
 
 Do this step by step, by going one row at a time:
