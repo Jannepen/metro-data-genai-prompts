@@ -1,0 +1,31 @@
+The following data records people’s locations inside a metro station using sensors.
+Your task is to determine the number of people inside a specific zone.
+To do this, use the coordinates of each person and compare them to the zone limits.
+
+The zone limits for zone A are the following:
+x_axis: The x_axis value must be between 159.8 and 167.4
+z_axis: The z_axis value must be between -176.5 and -171.5
+
+Task: Determine the number of people inside the zone A using the following data
+
+<Data>
+{df_test_csv}
+</Data>
+
+Do this step by step, by going one row at a time:
+1. Go through the data one row at a time.
+2. For each row, read agent_id, x_axis, and z_axis.
+3. Check if the coordinates are within the zone limits.
+4. If they are, include the agent in the zone.
+5. If an agent appears multiple times in the zone, only count them once.
+6. After going through the whole data, check the individuals inside the zone and sure they really are within the zone limits.
+
+Return the result exactly in this format:
+
+Zone:
+- Count: <number>
+- People:
+  - agent_id: <id>, x_axis: <value>, z_axis: <value>
+  ...
+  
+Do not return the step-by-step reasoning. Just return the final result in the format above.
