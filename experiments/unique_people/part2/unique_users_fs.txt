@@ -1,0 +1,28 @@
+The following data contains information about the number of people exiting and entering a metro station.
+Your task is to determine how many unique people used the station.
+
+You can infer whether people enter or exit station from the traffic_types column.
+If the traffic_type is from_metro, then people are exiting the station.
+If the traffic_type to_metro, then people are entering the station.
+
+Example:
+
+<Data>
+{data_example}
+<\Data>
+
+Answer:
+7372 people exited the station and 999 people entered the station.
+The total number of unique people using the station was 8371.
+
+Now apply the same logic to the following dataset:
+
+<Data>
+{data}
+</Data>
+
+Task: Determine how many unique individuals in total used the station.
+
+Return the result as:
+- Counts of people entering and exiting the station.
+- The number of unique people that used the station.
