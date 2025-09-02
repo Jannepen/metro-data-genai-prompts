@@ -1,0 +1,12 @@
+The following data records people’s movements inside a metro station using sensors.
+Each entry includes an 'agent_id' field that uniquely identifies a person.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine how many unique individuals appear in this data.
+
+Return the result as:
+- A single integer (the number of unique people)
+- A one-sentence explanation of how the result was obtained.
