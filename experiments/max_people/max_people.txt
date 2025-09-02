@@ -1,0 +1,14 @@
+The following data contains the number of people inside a metro station during a time window.
+Your task is to determine the maximum number of people inside the station.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine the maximum number of people inside the station.
+
+One row of data includes a timestamp and the number of people inside the station at that timestamp.
+Figure out the maximum number of people by going through the table and keeping track of the maximum value.
+
+Return the result as:
+- The maximum number of people during the time window. Do not return the process.
