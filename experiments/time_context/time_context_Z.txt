@@ -1,0 +1,12 @@
+The following data contains information about the number of people exiting and entering a metro station through various equipment.
+Your task is to determine the maximum number of people using a specified equipment.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine the date and time when equipment called 'XX01' was used the most.
+
+The answer should contain the following information:
+- The date and time the maximum people were measured.
+- What day of the week it was.
