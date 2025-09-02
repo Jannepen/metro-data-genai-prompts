@@ -1,0 +1,21 @@
+The following data records people’s locations inside a metro station using sensors.
+Your task is to determine the number of unique people inside a specific zone.
+To do this, use the coordinates of each person and compare them to the zone limits.
+
+The zone limits for the zone A are the following:
+x_axis: The x_axis value must be between 159.8 and 167.4
+z_axis: The z_axis value must be between -176.5 and -171.5
+
+<Data>
+{data}
+</Data>
+
+Task: Determine the number of people inside the zone A
+
+Return the result exactly in this format:
+
+Zone A:
+- Count: <number>
+- People:
+  - agent_id: <id>, x_axis: <value>, z_axis: <value>
+  ...
