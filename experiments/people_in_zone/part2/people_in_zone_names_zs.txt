@@ -1,0 +1,17 @@
+The following data records people’s locations inside a metro station using sensors.
+Your task is to determine the number of people inside a specific zone.
+To do this, calculate the number of unique people that have 'Zone_A' as the zone name.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine the number of people inside the zone
+
+Return the result exactly in this format:
+
+Zone:
+- Count: <number>
+- People:
+    - agent_id: <id>
+    ...
