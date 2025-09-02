@@ -1,0 +1,29 @@
+The following data contains information about the number of people exiting and entering a metro station.
+Your task is to determine the total amount of people entering or exiting the station.
+
+You can infer whether people enter or exit station from the traffic_types column.
+If the traffic_type is from_metro, then people are exiting the station.
+If the traffic_type to_metro, then people are entering the station.
+
+<Data>
+{data}
+</Data>
+
+Task: Determine how many unique individuals in total used the station.
+Remember to always sum only two numbers together at a time.
+After summing two numbers together, make sure the answer is correct. Only then move on to summing the next number.
+
+Step by step:
+1. Count hourly number of people exiting the station: 
+    Hour 16:
+    Hour 17:
+    Hour 18:
+1. Count total number of people exiting the station:
+2. Count people entering the station:
+3. Sum the counts of people entering and exiting the station to get the total unique people:
+
+Return the result as:
+- Counts of people entering and exiting the station.
+- The number of unique people that used the station.
+
+In your response, only allow calculations that have maximum two numbers being summed together.
